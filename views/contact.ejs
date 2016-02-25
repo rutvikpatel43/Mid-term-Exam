@@ -1,6 +1,25 @@
 <% include partials/header.ejs %>
-    <h1><%= title %></h1>
-    <p>Welcome to
-        <%= title %>
-    </p>
+    <main class="container">
+        <h1><%= title %></h1>
+        <p>
+            Please Leave Your Details to me
+        </p>
+        <form action="send_mail.php" method="post" enctype="text/plain">
+            Name:
+            <br>
+            <input type="text" name="name" value="your name">
+            <br> E-mail:
+            <br>
+            <input type="text" name="mail" value="your email">
+            <br> Comment:
+            <br>
+            <input type="text" name="comment" value="your comment" size="50">
+            <br>
+            <br>
+            <input type="submit" value="Send">
+            <input type="reset" value="Reset">
+        </form>
+
+    </main>
+
 <% include partials/footer.ejs %>
